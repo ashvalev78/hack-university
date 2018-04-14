@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/homePage.vue";
-import About from "./views/About.vue";
+import Info from "./components/info.vue";
+import createEvent from "./components/createEvent.vue";
 
 Vue.use(Router);
 
@@ -9,13 +9,13 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "homePage",
-      component: Home
+      name: "info",
+      component: Info
     },
     {
-      path: "/about",
-      name: "about",
-      component: About
+      path: "/event",
+      name: "event",
+      component: createEvent
     }
   ]
 });
