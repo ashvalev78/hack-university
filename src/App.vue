@@ -12,7 +12,9 @@
     <div class="content">
       <!-- <div class="map" id="map"></div> -->
       <div id="mapContainer"></div>
-      <div class="info"></div>
+      <div class="info">
+        <a href="#" @click="addMarker">ДОБАВЬ МЕНЯ ПОЛНОСТЬЮ</a>
+      </div>
     </div>
   </div>
 </template>
@@ -25,6 +27,11 @@ export default {
   components: {
     appHeader,
     appMap
+  },
+  methods: {
+    addMarker() {
+      appMap.methods.addMarker();
+    }
   }
 }
   window.onload = appMap.methods.initMap;
